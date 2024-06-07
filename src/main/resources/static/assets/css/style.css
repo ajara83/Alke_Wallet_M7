@@ -1,0 +1,60 @@
+body{
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,0.8715861344537815) 8%, rgba(0,212,255,1) 100%);
+    min-height: 75rem;
+    padding-top: 4.5rem;  
+      
+  }
+
+.alke_logo{
+    width: 250px !important;    
+    padding-top: 20px;
+    padding-bottom: 30px;
+}
+
+.alke_logo_menu{
+    width: 70px !important;        
+}
+
+.MisAcciones{
+    color: white;
+    padding-top: 40px;
+    font-size: large;
+}
+
+.acciones{
+    height: 100px;
+    background-color: rgba(9, 9, 121, 0.8715861344537815);
+    padding-top: 30px;
+}
+
+.container
+{
+    padding: auto;
+}
+
+.DineroCargo{
+    color: red;
+}
+
+.DineroAbono{
+    color: green;
+}
+
+@media screen and (max-width:1024px) 
+{
+    .alke_logo{
+        max-width: 200px !important;
+        padding-top: 20px;
+        padding-bottom: 30px;
+    }
+
+    .MisAcciones{
+        color: white;
+        padding-top: 40px;
+        font-size: small;
+    }
+    
+}
+
+

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Gestión de Wallet</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #000;
+            color: #0f0;
+        }
+        .container {
+            max-width: 400px;
+            margin-top: 100px;
+        }
+        .btn {
+            background-color: #0f0;
+            color: #000;
+        }
+        .btn:hover {
+            background-color: #0a0;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container text-center">
+        <h1>Bienvenido al sistema de gestión de Wallet</h1>
+        <a href="/clientes/nuevo" class="btn btn-block mt-3">Crear Nuevo Cliente</a>
+        <a href="/clientes" class="btn btn-block mt-3">Ver Clientes</a>
+		<a href="/clientes/transferir" class="btn btn-block mt-3">Transferir entre cuentas</a>
+		<a href="/transacciones" class="btn btn-block mt-3">Ver historial de transacciones</a>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

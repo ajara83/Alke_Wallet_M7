@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Transferir Fondos</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #000;
+            color: #0f0;
+        }
+        .container {
+            max-width: 400px;
+            margin-top: 50px;
+        }
+        .btn {
+            background-color: #0f0;
+            color: #000;
+        }
+        .btn:hover {
+            background-color: #0a0;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center">Transferir Fondos</h1>
+        <form th:action="@{/clientes/transferir}" method="post">
+            <div class="form-group">
+                <label for="idClienteOrigen">Cliente Origen:</label>
+                <select id="idClienteOrigen" name="idClienteOrigen" class="form-control">
+                    <option th:each="cliente : ${clientes}" th:value="${cliente.id}" th:text="${cliente.nombre}"></option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="idClienteDestino">Cliente Destino:</label>
+                <select id="idClienteDestino" name="idClienteDestino" class="form-control">
+                    <option th:each="cliente : ${clientes}" th:value="${cliente.id}" th:text="${cliente.nombre}"></option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="monto">Monto:</label>
+                <input type="number" id="monto" name="monto" class="form-control" />
+            </div>
+            <button type="submit" class="btn btn-block">Transferir</button>
+        </form>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

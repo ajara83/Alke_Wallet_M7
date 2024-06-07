@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Historial de Transacciones</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #000;
+            color: #0f0;
+        }
+        .container {
+            max-width: 600px;
+            margin-top: 50px;
+        }
+        .table {
+            color: #0f0;
+        }
+        .btn {
+            background-color: #0f0;
+            color: #000;
+        }
+        .btn:hover {
+            background-color: #0a0;
+            color: #fff;
+        }
+        .table th, .table td {
+            color: #0f0;
+        }
+        .table a {
+            color: #0f0;
+        }
+        .table a:hover {
+            color: #0a0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center">Historial de Transacciones</h1>
+        <table class="table table-dark table-bordered">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Fecha</th>
+                    <th>Tipo</th>
+                    <th>Monto</th>
+                    <th>Cuenta Origen</th>
+                    <th>Cuenta Destino</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="transaccion : ${transacciones}">
+                    <td th:text="${transaccion.id}"></td>
+                    <td th:text="${transaccion.fecha}"></td>
+                    <td th:text="${transaccion.tipo}"></td>
+                    <td th:text="${transaccion.monto}"></td>
+                    <td th:text="${transaccion.cuentaOrigen}"></td>
+                    <td th:text="${transaccion.cuentaDestino}"></td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="text-center">
+            <a th:href="@{/clientes}" class="btn">Volver</a>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
